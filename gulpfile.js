@@ -7,7 +7,7 @@ var gulp         = require('gulp');
 gulp.task('browser-sync',  async function() {
 
     browserSync.init({
-        server: "./build"
+        server: "./docs"
     });    
 
     gulp.watch("app/sass/*.scss", gulp.series('sass'));
@@ -23,25 +23,25 @@ gulp.task('sass', async function(){
             browsers: ['last 2 versions'],
             cascade: false
         }))
-    .pipe(gulp.dest('build/css'))
+    .pipe(gulp.dest('docs/css'))
     .pipe(browserSync.reload({stream:true}))
 });
 
 gulp.task('html', async function(){
     gulp.src('app/**/*.+(htm|html)')
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('docs'))
     .pipe(browserSync.reload({stream:true}))
 });
 
 gulp.task('js', async function(){
     gulp.src('app/**/*.js')
-    .pipe(gulp.dest('build'))
+    .pipe(gulp.dest('docs'))
     .pipe(browserSync.reload({stream:true}))
 });
 
 gulp.task('img', async function(){
     gulp.src('app/img/*.*')
-    .pipe(gulp.dest('build/img'))
+    .pipe(gulp.dest('docs/img'))
     .pipe(browserSync.reload({stream:true}));
 });
 

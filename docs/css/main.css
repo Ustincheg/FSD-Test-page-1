@@ -1,0 +1,25 @@
+.max-content {
+  max-width: 1125px;
+  margin: 0 auto; }
+
+body {
+  font-family: pt sans;
+  color: #000000;
+  margin: 0;
+  overflow-x: hidden; }
+  body h1 {
+    font-size: 40px; }
+  body h2 {
+    font-family: pt serif;
+    font-size: 34px;
+    font-weight: normal; }
+  body p {
+    font-size: 18px; }
+  body a {
+    color: #ffffff;
+    text-decoration: none; }
+
+.flex-it {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
